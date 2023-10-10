@@ -1,0 +1,47 @@
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    animation-name: banner;
+    animation-duration: 20s;
+    background-position: center top;
+    background-size: cover;
+    animation-iteration-count: infinite;
+}
+
+@keyframes banner {
+    0% {background-image: url('https://media.discordapp.net/attachments/1158643953114038302/1158646877516988496/group-young-children-running-playing-park.jpg?ex=651d017e&is=651baffe&hm=465de2d3c3a8a4d9bd3112901d82eb840f8ea07602bd7a5026791606fd98502e&=')}
+
+    25% {background-image: url('https://media.discordapp.net/attachments/1158643953114038302/1158644001986060308/group-kids-friend-laughing-together.jpg?ex=651cfed0&is=651bad50&hm=5e4185ce756d9ecdea68504aca6a985fba89caa381033e16e3522b34a16c4208&=');}
+
+    50% {background-image: url('https://media.discordapp.net/attachments/1158643953114038302/1158649158505332766/asian-boy-little-girls-sitting-wooden-bridge-joyful-playing-with-banana-leaves-head-smile-laughting-with-funny-together-copy-space-rural-scene-style-concept.jpg?ex=651d039e&is=651bb21e&hm=f4902b14c42fc8a91c66c454ccc261e6342142db69f1a0c0ffab722d6458048b&=');}
+
+    75% {background-image: url('https://media.discordapp.net/attachments/1158643953114038302/1158656805459722260/group-children-lying-reading-grass-field.jpg?ex=651d0abd&is=651bb93d&hm=59710ddac9c0481ae50eda1acde5a13d7ea4854678678bef052d217d37891d06&=');}
+
+    99.99% {background-image: url('https://media.discordapp.net/attachments/1158643953114038302/1158646877516988496/group-young-children-running-playing-park.jpg?ex=651d017e&is=651baffe&hm=465de2d3c3a8a4d9bd3112901d82eb840f8ea07602bd7a5026791606fd98502e&=')}
+}
+
+.sesi2 {
+    background-image: url('https://media.discordapp.net/attachments/1158643953114038302/1158662046070603786/Untitled_1.jpg?ex=651d0f9e&is=651bbe1e&hm=396e97910a6ed0e6575469f28797efe0bf6f3832022be21bb99e13a1b2ab58f6&=');
+}
+
+
+/* CSS untuk tampilan mobile */
+@media (max-width: 768px) {
+    /* Section banner */
+    #banner {
+        text-align: center;
+    }
+
+    /* Section 1 */
+    .sesi1 {
+        height: auto; /* Atur ketinggian ke otomatis agar sesuai dengan konten */
+        padding: 20px; /* Tambahkan padding untuk meningkatkan ruang konten */
+    }
+
+    .container1 {
+        height: auto;
+        padding: 20px;
+        display: flex;
+    }
+}
