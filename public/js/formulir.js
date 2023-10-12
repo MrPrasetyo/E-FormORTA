@@ -3,29 +3,67 @@ function activateRadio(radioID) {
     radioElement.checked = true;
 }
 
+// Declare Variabel
+var pilih_form1 = document.getElementById("pilihForm1");
+var pilih_form2 = document.getElementById("pilihForm2");
+var pilih_form3 = document.getElementById("pilihForm3");
+var content1 = document.getElementById("contentForm1");
+var content2 = document.getElementById("contentForm2");
+var content3 = document.getElementById("contentForm3");
+var section1 = document.getElementById("header-form")
+
+// Change Form
+pilih_form1.addEventListener('click', ()=>{
+  content1.style.display='block';
+  content2.style.display='none';
+  content3.style.display='none';
+  pilih_form1.style.backgroundColor='#EA912C';
+  pilih_form2.style.backgroundColor='#0065A8';
+  pilih_form3.style.backgroundColor='#0065A8';
+})
+
+pilih_form2.addEventListener('click', ()=>{
+  content1.style.display='none';
+  content2.style.display='block';
+  content3.style.display='none';
+  pilih_form1.style.backgroundColor='#0065A8';
+  pilih_form2.style.backgroundColor='#EA912C';
+  pilih_form3.style.backgroundColor='#0065A8';
+})
+
+pilih_form3.addEventListener('click', ()=>{
+  content1.style.display='none';
+  content2.style.display='none';
+  content3.style.display='block';
+  pilih_form1.style.backgroundColor='#0065A8';
+  pilih_form2.style.backgroundColor='#0065A8';
+  pilih_form3.style.backgroundColor='#EA912C';
+})
+
+
 async function fetchProvinces() {
-    try {
-      const response = await fetch('https://kanglerian.github.io/api-wilayah-indonesia/api/provinces.json');
-      if (!response.ok) {
-        throw new Error('Gagal mengambil data provinsi');
-      }
-  
-      const provinces = await response.json();
-      const provinsiSelect = document.getElementById('provinsiSelect');
-  
-      provinces.forEach((province) => {
-        const option = document.createElement('option');
-        option.value = province.id;
-        option.textContent = province.name
-        .split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-        .join(' ');
-        provinsiSelect.appendChild(option);
-      });
-    } catch (error) {
-      console.error('Terjadi kesalahan:', error);
+  try {
+    const response = await fetch('https://kanglerian.github.io/api-wilayah-indonesia/api/provinces.json');
+    if (!response.ok) {
+      throw new Error('Gagal mengambil data provinsi');
     }
+
+    const provinces = await response.json();
+    const provinsiSelect = document.getElementById('provinsiSelect');
+
+    provinces.forEach((province) => {
+      const option = document.createElement('option');
+      option.value = province.id;
+      option.textContent = province.name
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
+      provinsiSelect.appendChild(option);
+    });
+  } catch (error) {
+    console.error('Terjadi kesalahan:', error);
   }
+}
   
   async function fetchRegenciesByProvince(provinceId) {
     try {

@@ -28,17 +28,52 @@
     @include('partials.navbar')
 
     {{-- Section Header & form --}}
-    <section id="header-form" class="header-form w-screen lg:h-[200vh] sm:h-[230vh]">
-        @include('layouts.header-form')
+    <section id="header-form" class="header-form w-screen">
+        <style>
+            .box-container {
+                box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.4);
+            }
+        
+            .header-container {
+                background-image: url('https://media.discordapp.net/attachments/1158643953114038302/1160564098212302868/Background_22.png?ex=65351e8b&is=6522a98b&hm=ff4523b3f30105494bb9e61136ee9b04ad35d60d027af1215e880355780ed44b&=&width=1920&height=800');
+                object-fit: fill;
+                background-repeat: no-repeat;
+            }
+        </style>
+        
+        <div class="header-container lg:bg-contain sm:bg-auto bg-scroll">
+            <div class="text-center mb-[50px] pt-[20vh]">
+                <h1 class="textctn text-orange-400 font-black text-7xl">Layanan Orang Tua Asuh</h1>
+                <h2 class="textctn2 text-white font-medium text-3xl mt-[5px]">Layanan Formulir Pendaftaran Orang Tua Asuh (ORTA)
+                </h2>
+            </div>
+        
+            <div class="w-full flex justify-center pb-[100px]">
+                <div class="box-container w-[70%] border-2 flex justify-center bg-white">
+                    <div class="w-full h-auto px-[30px] py-10 flex justify-center">
+                        <div class="w-[95%] py-10">
+                            <!-- Tombol pemilihan Form -->
+                            <div class="grid grid-cols-3 mb-5 gap-1">
+                                <div class="flex w-full justify-center items-center">
+                                    <button class="w-full py-3 font-medium lg:text-3xl sm:text-xl bg-[#0065A8] hover:bg-[#EA912C] text-white text-center border-2" id="pilihForm1">Form ORTA</button>
+                                </div>
+                                <div class="flex w-full justify-center items-center">
+                                    <button class="w-full py-3 font-medium lg:text-3xl sm:text-xl bg-[#0065A8] hover:bg-[#EA912C] text-white text-center border-2" id="pilihForm2">Form Anak</button>
+                                </div>
+                                <div class="flex w-full justify-center items-center">
+                                    <button class="w-full py-3 font-medium lg:text-3xl sm:text-xl bg-[#0065A8] hover:bg-[#EA912C] text-white text-center border-2" id="pilihForm3">Form Panti</button>
+                                </div>
+                            </div>
+                            @include('layouts.formorta')
+                            @include('layouts.formanak')
+                            @include('layouts.formpanti')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </section>
-
-    {{-- section Form --}}
-    <section id="form-daftar" class="form-daftar h-[50vh]">
-        <div class=""><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aliquam, eum pariatur dicta, deleniti enim soluta ratione, quibusdam consectetur quae recusandae! Ea nam quaerat quia nisi temporibus tempora, nostrum ratione veniam qui doloribus reiciendis cupiditate pariatur autem cumque, corporis velit, ipsa odio ut? Cumque eum expedita hic enim quaerat culpa, suscipit vel vitae laudantium vero odit dolore harum voluptates nisi dolorum saepe sed accusamus nobis eveniet non ex repellat? Dolor obcaecati blanditiis, natus nulla id voluptate illo laudantium, veniam sint ex accusamus culpa? Temporibus sunt veritatis dolor dolorum est at, provident repellat excepturi velit numquam vero fugiat obcaecati voluptas magni mollitia alias rem odio ipsum quam facere. Quod ab saepe tenetur eligendi facere eaque inventore, commodi eum asperiores, placeat animi minima, porro similique sint doloremque eius blanditiis rerum. Vel molestias est modi fuga quas iure inventore, cum dolor quam harum commodi voluptate repellendus aut at minus doloremque beatae non! Possimus accusamus quam, nulla ipsa error aspernatur facilis dolorum iste ullam quod corporis ex illum temporibus porro tempora assumenda ad beatae itaque suscipit sint consectetur aliquam quibusdam sit. Adipisci asperiores iusto deleniti. Molestias, provident similique! Totam consequatur quam vel ab temporibus atque, doloremque quia tempore cum beatae delectus eligendi harum quidem eveniet ea voluptate molestias at nisi aliquam, ducimus perferendis? Hic, minus harum dolorem tenetur, aspernatur voluptatem maiores vitae maxime architecto sed voluptas explicabo non doloribus corrupti aperiam beatae reiciendis ipsum? Atque sunt quo quam autem, aut adipisci ipsa inventore debitis ipsam excepturi esse iste facilis corporis id, magni beatae libero maxime magnam est reiciendis numquam? Laudantium reiciendis placeat ab cumque exercitationem quasi ducimus culpa at tempore voluptate! Iure incidunt quo ex ducimus, consequatur quis cumque. Blanditiis quisquam veritatis mollitia iste nam corrupti quibusdam, earum necessitatibus neque, reiciendis quo sunt facere eligendi debitis, recusandae quis quas eaque placeat minima sed accusantium.</p></div>
-    </section>
-
-    {{-- Section Table --}}
-    <section id="table-list" class="table-list"></section>
 
     {{-- Jquery wajib  --}}
     <script src="{{ asset('js/formulir.js') }}"></script>

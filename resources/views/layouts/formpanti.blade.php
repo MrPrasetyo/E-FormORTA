@@ -1,42 +1,9 @@
-{{-- Checkbox pemilihan Form --}}
-<div class="grid grid-cols-3 mb-5 gap-1">
-    <div class="flex justify-center border-1 py-3 rounded-lg border-[#0065A8] items-center hover:bg-[#0065A8] hover:text-white"
-        onclick="activateRadio('flexRadioForm1')">
-        <input class="form-check-form1 w-5 h-5 lg:mx-0 sm:mx-3" type="radio" name="flexRadioForm"
-            id="flexRadioForm1">
-        <label
-            class="form-check-label lg:text-center sm:text-left sm:pr-2 lg:text-xl sm:text-md font-semibold lg:ml-2"
-            for="flexRadioForm">
-            Formulir ORTA
-        </label>
-    </div>
-    <div class="flex justify-center border-1 py-3 rounded-lg border-[#0065A8] items-center hover:bg-[#0065A8] hover:text-white"
-        onclick="activateRadio('flexRadioForm2')">
-        <input class="form-check-form2 w-5 h-5 lg:mx-0 sm:mx-3" type="radio" name="flexRadioForm"
-            id="flexRadioForm2">
-        <label
-            class="form-check-label lg:text-center sm:text-left sm:pr-2 lg:text-xl sm:text-md font-semibold lg:ml-2"
-            for="flexRadioForm">
-            Formulir Anak Yatim & Piatu
-        </label>
-    </div>
-    <div class="flex justify-center border-1 py-3 rounded-lg border-[#0065A8] items-center hover:bg-[#0065A8] hover:text-white"
-        onclick="activateRadio('flexRadioForm3')">
-        <input class="form-check-form3 w-5 h-5 lg:mx-0 sm:mx-3" type="radio" name="flexRadioForm"
-            id="flexRadioForm3">
-        <label
-            class="form-check-label lg:text-center sm:text-left sm:pr-2 lg:text-xl sm:text-md font-semibold lg:ml-2"
-            for="flexRadioForm">
-            Formulir Asosiasi Panti Asuhan
-        </label>
-    </div>
-</div>
-
-{{-- Content Formulir --}}
-<div>
+<form action="">
+{{-- Content Formulir ORTA --}}
+<div id="contentForm3" class="hidden">
     <div class="mb-3">
         <label for="fnama-orta" class="form-label lg:text-3xl sm:text-xl font-semibold">Nama
-            Lengkap</label>
+            </label>
         <input type="text" class="form-control lg:text-3xl sm:text-[12px]" id="nama-orta"
             aria-describedby="name" name="fnama-orta">
     </div>
@@ -93,12 +60,12 @@
         <div class="">
             <label class="form-check-label lg:text-2xl font-bold" for="frumah-orta">Memiliki Nomor
                 Rumah?</label>
-            <div><input type="text" class="form-control mt-2 lg:text-2xl"></div>
+            <div><input id="nomorrumah-orta" type="text" class="form-control mt-2 lg:text-2xl"></div>
         </div>
         <div class="">
             <label class="form-check-label lg:text-2xl font-bold" for="fkantor-orta">Memiliki Nomor
                 Kantor?</label>
-            <div><input type="text" class="form-control mt-2 lg:text-2xl"></div>
+            <div><input id="nomorkantor-orta" type="text" class="form-control mt-2 lg:text-2xl"></div>
         </div>
         <div class="mt-3">
             <label class="form-check-label mb-2 lg:text-2xl font-bold" for="fnomorhp-orta">Nomor
@@ -124,112 +91,145 @@
         <label class="font-semibold lg:text-3xl" for="">Bertindak atas nama :</label>
         <div class="grid grid-cols-5 mt-2">
             <div class="form-check">
-                <input class="form-check-input lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" type="radio" value="" name="flexCheck" id="fpribadi-orta">
+                <input class="form-check-input lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]"
+                    type="radio" value="Pribadi" name="flexCheck" id="fpribadi-orta">
                 <label class="form-check-label lg:text-xl sm:text-lg ml-2" for="fpribadi-orta">
                     Pribadi
                 </label>
             </div>
             <div class="form-check lg:col-span-1 sm:col-span-2">
-                <input class="form-check-input lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" type="radio" value="" name="flexCheck" id="finstansi-orta">
+                <input class="form-check-input lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]"
+                    type="radio" value="Instansi" name="flexCheck" id="finstansi-orta">
                 <label class="form-check-label lg:text-xl sm:text-lg ml-2" for="finstansi-orta">
                     Instansi/Badan Usaha
                 </label>
             </div>
             <div class="form-check lg:col-span-3 sm:col-span-2">
-                <input class="form-check-input lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px] lg:mr-3" type="radio" name="flexCheck" value="" id="fcustom-orta">
-                <input class="border-1 border-gray-300 rounded-lg lg:w-[50%] sm:w-full lg:text-xl sm:text-lg px-3 py-1" type="text" id="">
+                <input
+                    class="form-check-input lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px] lg:mr-3"
+                    type="radio" name="flexCheck" value="" id="">
+                <input
+                    class="border-1 border-gray-300 rounded-lg lg:w-[50%] sm:w-full lg:text-xl sm:text-lg px-3 py-1"
+                    type="text" id="fcustom-orta">
             </div>
         </div>
     </div>
-    
+
     {{-- box biru dalem form --}}
     <div class="w-full h-[7vh] bg-[#0065A8] flex justify-center mb-10">
-        <h3 class="text-white lg:text-3xl sm:text-lg px-5 py-3 font-medium">Dengan ini menyatakan kesungguhan saya untuk menjadi Orang Tua Asuh Yatim dengan penjelasan sebagai berikut: </h3>
+        <h3 class="text-white lg:text-3xl sm:text-lg px-5 py-3 font-medium">Dengan ini menyatakan
+            kesungguhan saya untuk menjadi Orang Tua Asuh Yatim dengan penjelasan sebagai berikut:
+        </h3>
     </div>
 
     {{-- Section Donasi --}}
 
     <div class="mb-3 grid grid-cols-3 grid-rows-2 gap-y-5">
         <div class="row-span-2">
-            <label class="lg:text-3xl sm:text-xl font-semibold" for="">Nominasi yang didonasikan</label>
+            <label class="lg:text-3xl sm:text-xl font-semibold" for="">Nominasi yang
+                didonasikan</label>
         </div>
         <div>
-            <input class="form-check-input lg:w-[20px] lg:h-[20px] sm:w-[15px] sm:h-[15px] mr-2" type="radio" name="checkDonasi" value="" id="check-donasi">
+            <input class="form-check-input lg:w-[20px] lg:h-[20px] sm:w-[15px] sm:h-[15px] mr-2"
+                type="radio" name="checkDonasi" value="Rp. 600.000" id="check-donasi">
             <label class="lg:text-3xl sm:text-lg ml-2" for="">Rp. 600.000/bulan</label>
         </div>
         <div>
             <label class="lg:text-3xl sm:text-lg" for="">selama : </label>
-            <input class="mx-1 lg:text-3xl sm:text-lg text-center border-1 px-2 lg:w-[50%] sm:w-[30%]" type="number">
+            <input
+                class="mx-1 lg:text-3xl sm:text-lg text-center border-1 px-2 lg:w-[50%] sm:w-[30%]"
+                type="number" id="checkbln-donasi">
             <label class="lg:text-3xl sm:text-lg" for="">bulan</label>
         </div>
         <div>
-            <input class="form-check-input lg:w-[20px] lg:h-[20px] sm:w-[15px] sm:h-[15px] mr-2" type="radio" name="checkDonasi" value="" id="check-donasi2">
-            <input class="border-1 px-2 lg:text-3xl sm:text-lg lg:w-[50%] sm:w-[30%] text-center" type="number" name="" id="custom-donasi">
+            <input class="form-check-input lg:w-[20px] lg:h-[20px] sm:w-[15px] sm:h-[15px] mr-2"
+                type="radio" name="checkDonasi" value="" id="">
+            <input class="border-1 px-2 lg:text-3xl sm:text-lg lg:w-[50%] sm:w-[30%] text-center"
+                type="number" name="" id="custom-donasi">
             <label class="lg:text-3xl sm:text-lg " for="">/bulan</label>
         </div>
         <div>
             <label class="lg:text-3xl sm:text-lg" for="">selama : </label>
-            <input class="mx-1 lg:text-3xl sm:text-lg text-center border-1 px-2 lg:w-[50%] sm:w-[30%]" type="number">
+            <input
+                class="mx-1 lg:text-3xl sm:text-lg text-center border-1 px-2 lg:w-[50%] sm:w-[30%]"
+                type="number" id="custombln-donasi">
             <label class="lg:text-3xl sm:text-lg" for="">bulan</label>
         </div>
     </div>
 
     {{-- Cara Pembayaran Donasi --}}
     <div class="grid grid-cols-5 mb-5 mt-5">
-        <div class="lg:text-3xl sm:text-xl col-span-2 font-semibold"><label for="">Cara Pembayaran Donasi</label></div>
+        <div class="lg:text-3xl sm:text-xl col-span-2 font-semibold"><label for="">Cara
+                Pembayaran Donasi</label></div>
         <div>
-            <input class="lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" id="radioDonasi" name="RadioCaraPembayaran" type="radio">
+            <input class="lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" id="radioDonasi"
+                name="RadioCaraPembayaran" type="radio">
             <label class="lg:text-3xl sm:text-xl" for="radioDonasi">Tunai</label>
         </div>
         <div>
-            <input class="lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" id="radioDonasi2" name="RadioCaraPembayaran" type="radio">
+            <input class="lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" id="radioDonasi2"
+                name="RadioCaraPembayaran" type="radio">
             <label class="lg:text-3xl sm:text-xl" for="radioDonasi">Transfer</label>
         </div>
         <div>
-            <input class="lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" id="radioDonasi2" name="RadioCaraPembayaran" type="radio">
+            <input class="lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" id="radioDonasi3"
+                name="RadioCaraPembayaran" type="radio">
             <label class="lg:text-3xl sm:text-xl" for="radioDonasi">Jemput</label>
         </div>
     </div>
 
     {{-- box biru dalem form --}}
     <div class="w-full h-[7vh] bg-[#0065A8] flex justify-center mb-10">
-        <h3 class="text-white lg:text-3xl sm:text-lg px-5 lg:py-[20px] sm:py-3 font-medium">Bank yang digunakan untuk transfer : BCA 7751166218 a.n. Yay Rumah Yatim Arrohman</h3>
+        <h3 class="text-white lg:text-3xl sm:text-lg px-5 lg:py-[20px] sm:py-3 font-medium">Bank
+            yang digunakan untuk transfer : BCA 7751166218 a.n. Yay Rumah Yatim Arrohman</h3>
     </div>
 
     <div class="grid grid-cols-4 gap-x-5 mb-5">
-        <div><label class="lg:text-3xl sm:text-lg" for="">Teknis Pemberian Donasi</label></div>
-        <div class="lg:col-span-1 sm:col-span-2"><select class="form-select lg:text-3xl sm:text-lg" aria-label="Default select example">
-            <option selected>Pilih teknis pembayaran</option>
-            <option value="1">Diangsur per Bulan</option>
-            <option value="2">Dibayar total di muka</option>
-          </select></div>
-          <div class="lg:col-span-2 sm:col-span-1">
+        <div><label class="lg:text-3xl sm:text-lg" for="">Teknis Pemberian Donasi</label>
+        </div>
+        <div class="lg:col-span-1 sm:col-span-2"><select
+                class="form-select lg:text-3xl sm:text-lg" aria-label="Default select example" id="teknis-donasi">
+                <option selected>Pilih teknis pembayaran</option>
+                <option value="1">Diangsur per Bulan</option>
+                <option value="2">Dibayar total di muka</option>
+            </select></div>
+        <div class="lg:col-span-2 sm:col-span-1">
             <label class="lg:text-3xl sm:text-lg mr-5" for="setiapTanggal">Setiap tanggal</label>
-            <input class="lg:text-3xl sm:text-lg lg:w-[20%] sm:w-full border-2 text-center" id="setiapTanggal" type="number">
-          </div>
+            <input class="lg:text-3xl sm:text-lg lg:w-[20%] sm:w-full border-2 text-center"
+                id="setiapTanggal" type="number">
+        </div>
     </div>
 
     {{-- ketentuan dan foto --}}
     <div class="flex flex-col w-full mb-3">
-    <h3 class="font-semibold lg:text-3xl sm:text-2xl">Ketentuan :</h3>
-    <ol class="lg:text-2xl sm:text-xl my-3">
-        <li class="mt-1"><strong>1.</strong> Mendapatkan Laporan umum Bulanan</li>
-        <li class="mt-1"><strong>2.</strong> Untuk donasi melalui transfer, Orang tua Asuh bisa melakukan konfirmasi donasi melalui CRM Rumah Yatim dengan melampirkan bukti transfer melalui sms/WA ke nomor 081 221 200 900. <strong> Selama tidak melakukan konfirmasi, maka Rumah Yatim mencatat sebagai Infak/Sedekah tidak terikat.</strong></li>
-        <li class="mt-1"><strong>3.</strong> Laporan dalam bentuk softcopy dan akan di emailkan/WA ke Orang Tua Asuh</li>
-    </ol>
+        <h3 class="font-semibold lg:text-3xl sm:text-2xl">Ketentuan :</h3>
+        <ol class="lg:text-2xl sm:text-xl my-3">
+            <li class="mt-1"><strong>1.</strong> Mendapatkan Laporan umum Bulanan</li>
+            <li class="mt-1"><strong>2.</strong> Untuk donasi melalui transfer, Orang tua Asuh
+                bisa melakukan konfirmasi donasi melalui CRM Rumah Yatim dengan melampirkan bukti
+                transfer melalui sms/WA ke nomor 081 221 200 900. <strong> Selama tidak melakukan
+                    konfirmasi, maka Rumah Yatim mencatat sebagai Infak/Sedekah tidak
+                    terikat.</strong></li>
+            <li class="mt-1"><strong>3.</strong> Laporan dalam bentuk softcopy dan akan di
+                emailkan/WA ke Orang Tua Asuh</li>
+        </ol>
     </div>
 
     {{-- Upload Form --}}
     <div class="input-group mb-3">
-        <label class="input-group-text lg:text-3xl sm:text-xl font-bold" for="inputGroupFile01">Upload</label>
-        <input type="file" class="form-control lg:text-3xl sm:text-xl font-medium" id="inputGroupFile01">
+        <label class="input-group-text lg:text-3xl sm:text-xl font-bold"
+            for="inputGroupFile01">Upload</label>
+        <input type="file" class="form-control lg:text-3xl sm:text-xl font-medium"
+            id="fotobukti">
     </div>
 
     {{-- Button --}}
     <button type="submit"
-        class="px-10 py-2 bg-[#0065A8] text-white hover:bg-[#EA912C] lg:text-3xl sm:text-xl rounded-xl mt-2">
+        class="px-10 py-2 bg-[#0065A8] text-white hover:bg-[#EA912C] lg:text-3xl sm:text-xl rounded-xl mt-2" id="submit-form">
         <a href="#">Submit</a></button>
 
     <button type="submit"
-        class="ml-5 px-10 py-2 bg-red-600 hover:bg-red-900 text-white lg:text-3xl sm:text-xl rounded-xl mt-2">
+        class="ml-5 px-10 py-2 bg-red-600 hover:bg-red-900 text-white lg:text-3xl sm:text-xl rounded-xl mt-2" id="clear-form">
         <a href="#">Clear Form</a></button>
+</div>
+</form>

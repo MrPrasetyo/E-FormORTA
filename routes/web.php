@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormOrtaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::get('/formulir', function () {
     return view('formulir');
 });
+
+Route::post('/simpan-form-orta',[FormOrtaController::class,'store'])->name('simpan-form-orta');
