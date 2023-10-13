@@ -3,21 +3,21 @@
 {{-- Content Formulir ORTA --}}
 <div id="contentForm1" class="block">
     <div class="mb-3">
-        <label for="fnama-orta" class="form-label lg:text-3xl sm:text-xl font-semibold">Nama
+        <label for="nama-orta" class="form-label lg:text-3xl sm:text-xl font-semibold">Nama
             Lengkap</label>
         <input type="text" class="form-control lg:text-3xl sm:text-[12px]" id="nama-orta"
-            aria-describedby="name" name="fnama-orta">
+            aria-describedby="name" name="nama-orta">
     </div>
     <div class="mb-3">
         <label for="fdate-orta" class="form-label lg:text-3xl sm:text-xl font-semibold">Tanggal
             Lahir</label>
         <input type="date" class="form-control lg:text-3xl sm:text-[12px] w-[40%] "
-            id="date-orta" name="fdate-orta">
+            id="date-orta" name="date-orta">
     </div>
     <div class="mb-3">
         <label for="falamat-orta" class="form-label lg:text-3xl sm:text-xl font-semibold">Alamat
             Lengkap</label>
-        <textarea class="form-control lg:text-3xl sm:text-[12px]" id="alamat-orta" rows="4" name="falamat-orta"></textarea>
+        <textarea class="form-control lg:text-3xl sm:text-[12px]" id="alamat-orta" rows="4" name="alamat-orta"></textarea>
     </div>
 
     {{-- Pemilihan Provinsi, Kota, Kecamatan dan Kelurahan --}}
@@ -61,29 +61,29 @@
         <div class="">
             <label class="form-check-label lg:text-2xl font-bold" for="frumah-orta">Memiliki Nomor
                 Rumah?</label>
-            <div><input id="nomorrumah-orta" type="text" class="form-control mt-2 lg:text-2xl"></div>
+            <div><input name="nomorrumah-orta" id="nomorrumah-orta" type="text" class="form-control mt-2 lg:text-2xl"></div>
         </div>
         <div class="">
             <label class="form-check-label lg:text-2xl font-bold" for="fkantor-orta">Memiliki Nomor
                 Kantor?</label>
-            <div><input id="nomorkantor-orta" type="text" class="form-control mt-2 lg:text-2xl"></div>
+            <div><input name="nomorkantor-orta" id="nomorkantor-orta" type="text" class="form-control mt-2 lg:text-2xl"></div>
         </div>
         <div class="mt-3">
             <label class="form-check-label mb-2 lg:text-2xl font-bold" for="fnomorhp-orta">Nomor
                 Handphone</label>
-            <div><input id="fnomorhp-orta" type="text" class="form-control lg:text-2xl"></div>
+            <div><input name="nomorhp-orta" id="nomorhp-orta" type="text" class="form-control lg:text-2xl"></div>
         </div>
         <div class="mt-3">
             <label class="form-check-label mb-2 lg:text-2xl font-bold" for="fnomorwa-orta">Nomor
                 Whatsapp</label>
-            <div><input id="fnomorwa-orta" type="text" class="form-control lg:text-2xl"></div>
+            <div><input name="nomorwa-orta" id="nomorwa-orta" type="text" class="form-control lg:text-2xl"></div>
         </div>
     </div>
 
     <div class="mb-3">
         <label for="femail-orta" class="form-label lg:text-3xl font-semibold">Email
             address</label>
-        <input type="email" class="form-control lg:text-3xl" id="femail-orta"
+        <input type="email" class="form-control lg:text-3xl" name="email-orta" id="email-orta"
             placeholder="name@example.com">
     </div>
 
@@ -93,14 +93,14 @@
         <div class="grid grid-cols-5 mt-2">
             <div class="form-check">
                 <input class="form-check-input lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]"
-                    type="radio" value="Pribadi" name="flexCheck" id="fpribadi-orta">
+                    type="radio" value="Pribadi" name="radioalias" id="fpribadi-orta">
                 <label class="form-check-label lg:text-xl sm:text-lg ml-2" for="fpribadi-orta">
                     Pribadi
                 </label>
             </div>
             <div class="form-check lg:col-span-1 sm:col-span-2">
                 <input class="form-check-input lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]"
-                    type="radio" value="Instansi" name="flexCheck" id="finstansi-orta">
+                    type="radio" value="Instansi" name="radioalias" id="finstansi-orta">
                 <label class="form-check-label lg:text-xl sm:text-lg ml-2" for="finstansi-orta">
                     Instansi/Badan Usaha
                 </label>
@@ -108,10 +108,10 @@
             <div class="form-check lg:col-span-3 sm:col-span-2">
                 <input
                     class="form-check-input lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px] lg:mr-3"
-                    type="radio" name="flexCheck" value="" id="">
+                    type="radio" name="radioalias" value="" id="">
                 <input
                     class="border-1 border-gray-300 rounded-lg lg:w-[50%] sm:w-full lg:text-xl sm:text-lg px-3 py-1"
-                    type="text" id="fcustom-orta">
+                    type="text" id="fcustom-orta" name="radioalias">
             </div>
         </div>
     </div>
@@ -132,28 +132,28 @@
         </div>
         <div>
             <input class="form-check-input lg:w-[20px] lg:h-[20px] sm:w-[15px] sm:h-[15px] mr-2"
-                type="radio" name="checkDonasi" value="Rp. 600.000" id="check-donasi">
+                type="radio" name="checkDonasi" value="600000" id="checkdonasi">
             <label class="lg:text-3xl sm:text-lg ml-2" for="">Rp. 600.000/bulan</label>
         </div>
         <div>
             <label class="lg:text-3xl sm:text-lg" for="">selama : </label>
             <input
                 class="mx-1 lg:text-3xl sm:text-lg text-center border-1 px-2 lg:w-[50%] sm:w-[30%]"
-                type="number" id="checkbln-donasi">
+                type="number" id="checkdonasi" name="selamabulan">
             <label class="lg:text-3xl sm:text-lg" for="">bulan</label>
         </div>
         <div>
             <input class="form-check-input lg:w-[20px] lg:h-[20px] sm:w-[15px] sm:h-[15px] mr-2"
                 type="radio" name="checkDonasi" value="" id="">
             <input class="border-1 px-2 lg:text-3xl sm:text-lg lg:w-[50%] sm:w-[30%] text-center"
-                type="number" name="" id="custom-donasi">
+                type="number" name="checkdonasi" id="checkdonasi">
             <label class="lg:text-3xl sm:text-lg " for="">/bulan</label>
         </div>
         <div>
             <label class="lg:text-3xl sm:text-lg" for="">selama : </label>
             <input
                 class="mx-1 lg:text-3xl sm:text-lg text-center border-1 px-2 lg:w-[50%] sm:w-[30%]"
-                type="number" id="custombln-donasi">
+                type="number" name="selamabulan" id="custombln-donasi">
             <label class="lg:text-3xl sm:text-lg" for="">bulan</label>
         </div>
     </div>
@@ -164,17 +164,17 @@
                 Pembayaran Donasi</label></div>
         <div>
             <input class="lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" id="radioDonasi"
-                name="RadioCaraPembayaran" type="radio">
+                name="RadioCaraPembayaran" value="Tunai" type="radio">
             <label class="lg:text-3xl sm:text-xl" for="radioDonasi">Tunai</label>
         </div>
         <div>
             <input class="lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" id="radioDonasi2"
-                name="RadioCaraPembayaran" type="radio">
+                name="RadioCaraPembayaran" value="Transfer" type="radio">
             <label class="lg:text-3xl sm:text-xl" for="radioDonasi">Transfer</label>
         </div>
         <div>
             <input class="lg:w-[15px] lg:h-[15px] sm:w-[10px] sm:h-[10px]" id="radioDonasi3"
-                name="RadioCaraPembayaran" type="radio">
+                name="RadioCaraPembayaran" value="Jemput" type="radio">
             <label class="lg:text-3xl sm:text-xl" for="radioDonasi">Jemput</label>
         </div>
     </div>
@@ -189,15 +189,15 @@
         <div><label class="lg:text-3xl sm:text-lg" for="">Teknis Pemberian Donasi</label>
         </div>
         <div class="lg:col-span-1 sm:col-span-2"><select
-                class="form-select lg:text-3xl sm:text-lg" aria-label="Default select example" id="teknis-donasi">
+                class="form-select lg:text-3xl sm:text-lg" aria-label="Default select example" name="teknis-donasi" id="teknis-donasi">
                 <option selected>Pilih teknis pembayaran</option>
-                <option value="1">Diangsur per Bulan</option>
-                <option value="2">Dibayar total di muka</option>
+                <option value="Diangsur per Bulan">Diangsur per Bulan</option>
+                <option value="Dibayar total di muka">Dibayar total di muka</option>
             </select></div>
         <div class="lg:col-span-2 sm:col-span-1">
             <label class="lg:text-3xl sm:text-lg mr-5" for="setiapTanggal">Setiap tanggal</label>
             <input class="lg:text-3xl sm:text-lg lg:w-[20%] sm:w-full border-2 text-center"
-                id="setiapTanggal" type="number">
+                id="setiapTanggal" name="setiapTanggal" type="number">
         </div>
     </div>
 
@@ -221,7 +221,7 @@
         <label class="input-group-text lg:text-3xl sm:text-xl font-bold"
             for="inputGroupFile01">Upload</label>
         <input type="file" class="form-control lg:text-3xl sm:text-xl font-medium"
-            id="fotobukti">
+            id="fotobukti" name="fotobukti">
     </div>
 
     {{-- Button --}}

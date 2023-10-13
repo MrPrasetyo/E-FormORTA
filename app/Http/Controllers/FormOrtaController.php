@@ -9,17 +9,19 @@ class FormOrtaController extends Controller
 {
     public function store(Request $request)
 {
+
+
     $data = $request->validate([
-        'fnama-orta' => 'required|string',
-        'fdate-orta' => 'required|date',
-        'falamat-orta' => 'required|string',
+        'nama-orta' => 'required|string',
+        'date-orta' => 'required|date',
+        'alamat-orta' => 'required|string',
     ]);
 
     // Simpan data ke dalam tabel database
     form_orta::create([
-        'nama_orta' => $data['fnama-orta'],
-        'tgllahir_orta' => $data['fdate-orta'],
-        'alamat_orta' => $data['falamat-orta'],
+        'nama_orta' => $data['nama-orta'],
+        'tgllahir_orta' => $data['date-orta'],
+        'alamat_orta' => $data['alamat-orta'],
         'domisili_orta' => 3,
         'telepon_orta' => 3,
         'nomor_hp_orta' => 3,
@@ -32,7 +34,7 @@ class FormOrtaController extends Controller
     ]);
 
     // Redirect atau berikan respons sukses
-    return redirect()->route('nama-rute-berikutnya');
+    return redirect()->route('formulir');
 }
 
 }

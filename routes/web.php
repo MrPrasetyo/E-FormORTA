@@ -16,10 +16,10 @@ use App\Http\Controllers\FormOrtaController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/formulir', function () {
     return view('formulir');
-});
+})->name('formulir');
 
 Route::post('/simpan-form-orta',[FormOrtaController::class,'store'])->name('simpan-form-orta');
