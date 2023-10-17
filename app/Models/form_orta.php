@@ -22,5 +22,6 @@ class form_orta extends Model
         'cara_pembayaran_orta',
         'teknis_donasi_orta',
         'foto_orta',
+        'status',
     ];
 }
