@@ -35,7 +35,7 @@
             }
         
             .header-container {
-                background-image: url('https://media.discordapp.net/attachments/1158643953114038302/1160564098212302868/Background_22.png?ex=65351e8b&is=6522a98b&hm=ff4523b3f30105494bb9e61136ee9b04ad35d60d027af1215e880355780ed44b&=&width=1920&height=800');
+                background-image: url('https://media.discordapp.net/attachments/1158643953114038302/1160564098212302868/Background_22.png?ex=65351e8b&is=6522a98b&hm=ff4523b3f30105494bb9e61136ee9b04ad35d60d027af1215e880355780ed44b&=&width=1920&height=1080');
                 object-fit: fill;
                 background-repeat: no-repeat;
             }
